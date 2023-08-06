@@ -1,2 +1,4 @@
-# SQL1
-SQL Portfolio
+# Presha Merrit's SQL Portfolio
+
+# Welcome to my SQL Portfolio. This code repository contains examples of SQL I've written. Feel free to take a look and reach out if you have any questions:
+presh.merritt@gmail.com
