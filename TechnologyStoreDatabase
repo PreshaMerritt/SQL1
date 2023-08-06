@@ -1,0 +1,32 @@
+**/ Creating a table to show store items, prices, number of devices in stock and a descritor /**
+
+
+CREATE TABLE pear_store (barcode INTEGER PRIMARY KEY, name TEXT, price INTEGER, inventory INTEGER, color TEXT);
+
+INSERT into pear_store VALUES (1, "Pear Watch", 300, 50, "black");
+INSERT into pear_store VALUES (2, "PacMan Book", 2000, 50, "grey");
+INSERT into pear_store VALUES (3, "Pear Phone", 1000, 48, "lavender");
+INSERT into pear_store VALUES (4, "Pear Desk Pad", 25, 20, "brown");
+INSERT into pear_store VALUES (5, "Pear Desktop", 1800, 15, "grey");
+INSERT into pear_store VALUES (6, "Pear TV", 5000, 20, "white");
+INSERT into pear_store VALUES (7, "Pear Satelite", 2500, 3, "grey");
+INSERT into pear_store VALUES (8, "Pear E-Bike", 7000, 5, "black");
+INSERT into pear_store VALUES (9, "Pear Mouse", 25, 20, "white");
+INSERT into pear_store VALUES (10, "Pear Phone Case", 50, 50, "clear");
+INSERT into pear_store VALUES (11, "Pear Phone Charger", 25, 100, "white");
+INSERT into pear_store VALUES (12, "PacMan Book Charger", 30, 101, "white");
+INSERT into pear_store VALUES (13, "Pear Headphones", 200, 40, "yellow");
+INSERT into pear_store VALUES (14, "Pear Headphones 2.0", 400, 35, "bright yellow");
+INSERT into pear_store VALUES (15, "Pear Glasses", 1500, 3, "black");
+
+**/ show table **/
+
+SELECT * FROM pear_store;
+
+**/ Order table by price in descending order **/
+
+SELECT * FROM pear_store WHERE price ORDER BY price desc;
+
+**/ Show  most expensive items in descending order with repeat details **/
+
+SELECT color, SUM(price) FROM pear_store GROUP BY color;
